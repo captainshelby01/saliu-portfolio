@@ -15,8 +15,11 @@
 /* Portrait Photo Styles */
 .portrait-wrapper {
   position: relative;
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
   height: 420px;
+  height: auto;
+  aspect-ratio: 380 / 420;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,7 +96,7 @@
 }
 
 .hero-title {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 7vw, 64px);
   line-height: 1.1;
   letter-spacing: -1.5px;
   margin-bottom: 15px;
@@ -101,7 +104,7 @@
 
 .typing-container {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 3.5vw, 28px);
+  font-size: clamp(18px, 4vw, 28px);
   font-weight: 600;
   margin-bottom: 24px;
   color: var(--text-primary);

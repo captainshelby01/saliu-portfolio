@@ -112,7 +112,7 @@
 .mobile-drawer {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 80%;
   max-width: 320px;
   height: 100vh;
@@ -124,10 +124,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(100%);
 }
 
 .mobile-drawer.open {
-  transform: translateX(-125%); /* Moves the drawer into screen */
+  transform: translateX(0);
 }
 
 .mobile-drawer-content {
