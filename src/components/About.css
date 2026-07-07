@@ -1,0 +1,134 @@
+.about-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.about-grid {
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about-text-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-heading {
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.about-paragraph {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  padding: 20px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Attribute Cards list */
+.about-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attribute-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.attribute-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.wrapper-indigo {
+  background: linear-gradient(135deg, var(--color-primary), #4f46e5);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+}
+
+.wrapper-cyan {
+  background: linear-gradient(135deg, var(--color-secondary), #0891b2);
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+}
+
+.wrapper-pink {
+  background: linear-gradient(135deg, var(--color-accent), #c026d3);
+  box-shadow: 0 4px 15px rgba(217, 70, 239, 0.25);
+}
+
+.attribute-info h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.attribute-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .about-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .attribute-card {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+}
