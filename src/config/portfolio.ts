@@ -6,7 +6,10 @@ export interface Project {
   tech: string[];
   githubUrl: string;
   liveUrl: string;
-  visualType: 'tutors' | 'allura' | 'v3fixer' | 'kanban';
+  visualType: 'tutors' | 'allura' | 'v3fixer' | 'nourishark';
+  status?: string;
+  features?: string[];
+  architecture?: string;
 }
 
 export interface Skill {
@@ -31,6 +34,16 @@ export interface TimelineItem {
   isCurrent?: boolean;
 }
 
+export interface Testimonial {
+  id: number;
+  name: string;
+  role: string;
+  company: string;
+  feedback: string;
+  rating: number;
+  projectRelation?: string;
+}
+
 export const PORTFOLIO_DATA = {
   personal: {
     name: 'Saliu Oluwafemi',
@@ -43,7 +56,7 @@ export const PORTFOLIO_DATA = {
     ],
     email: 'olukoyioluwafemi100@gmail.com',
     github: 'https://github.com/captainshelby01',
-    linkedin: 'https://linkedin.com',
+    linkedin: 'https://www.linkedin.com/in/oluwafemi-saliu-18526a89/',
     location: 'Nigeria (Available for Remote)',
     availability: 'Available for Work',
     experienceYears: '3+ yrs'
@@ -57,8 +70,16 @@ export const PORTFOLIO_DATA = {
       description: 'An elegant professional platform for Winfrey Agbelese, The V3 Fixer. Offers executive communication architect branding, digital bookstores, pre-order systems for the V3 Devotional Trilogy, and full SEO/Schema optimizations.',
       tech: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'JSON-LD Schema'],
       githubUrl: 'https://github.com/captainshelby01',
-      liveUrl: 'https://the-v3-fixer-website.vercel.app/',
-      visualType: 'v3fixer'
+      liveUrl: 'https://www.thev3fixer.com',
+      visualType: 'v3fixer',
+      status: 'Live in Production',
+      features: [
+        'Custom pre-order gateway for the V3 Devotional Trilogy with dynamic order receipt generation',
+        'Executive branding showcase with responsive media galleries and testimonials',
+        'Rich JSON-LD Schema markup for maximum search engine indexability and author branding',
+        'Sub-second page load times with optimized asset bundling via Vite'
+      ],
+      architecture: 'Single Page React application leveraging TypeScript for strict typing, component modularity, and client-side routing optimized for Vercel edge deployment.'
     },
     {
       id: 2,
@@ -67,8 +88,16 @@ export const PORTFOLIO_DATA = {
       description: 'A personalized academic home & online tutoring platform for K-12 students. Features custom booking forms, exam preparation modules (GCSE/WAEC/SAT), testimonial sliders, and automated WhatsApp inquiry integration.',
       tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Schema.org'],
       githubUrl: 'https://github.com/captainshelby01',
-      liveUrl: 'https://dr-j-tutors.vercel.app/',
-      visualType: 'tutors'
+      liveUrl: 'https://www.drjtutorsglobal.com',
+      visualType: 'tutors',
+      status: 'Live in Production',
+      features: [
+        'Interactive subject catalog & curriculum breakdown for K-12 and international exams',
+        'Automated WhatsApp inquiry router that converts booking form inputs directly into structured messages',
+        'Cross-device responsive design with accessible color contrast and educational theme',
+        'Parent review testimonial slider and tutor qualification badges'
+      ],
+      architecture: 'Clean modern JavaScript & semantic HTML5 architecture with lightweight CSS modules and zero runtime overhead for fast mobile access.'
     },
     {
       id: 3,
@@ -77,20 +106,66 @@ export const PORTFOLIO_DATA = {
       description: 'A premium creative media & digital branding agency landing page. Features cinematic video integrations, modular portfolio galleries, client testimonials, and a custom lead generation flow to WhatsApp.',
       tech: ['HTML5', 'CSS3', 'JavaScript', 'FontAwesome', 'CSS Animations'],
       githubUrl: 'https://github.com/captainshelby01',
-      liveUrl: 'https://allura-smiles-portfolio.vercel.app/',
-      visualType: 'allura'
+      liveUrl: 'https://www.allurasmiles.com',
+      visualType: 'allura',
+      status: 'Live in Production',
+      features: [
+        'Cinematic hero video background with lazy loading and low-bandwidth fallbacks',
+        'Filterable portfolio showcase highlighting media production, photography, and brand identity projects',
+        'High-converting lead funnel capturing client requirements before routing to direct consultation',
+        'Smooth scroll transitions, dark glassmorphic styling, and micro-animations'
+      ],
+      architecture: 'Performance-tuned frontend architecture with custom CSS keyframes, responsive viewport units, and optimized imagery for creative agency presentation.'
     },
     {
       id: 4,
-      title: 'TaskFlow Kanban',
+      title: 'Nourish Ark Foods',
       category: 'fullstack',
-      description: 'A Kanban-based collaborative project management system for developers. Supports drag-and-drop workspace cards, real-time board updates via WebSockets, and database synchronization.',
-      tech: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io'],
+      description: 'An organic food production and staple preparation e-commerce platform offering stone-free peeled beans, naturally sweet honey beans, pure bean flour, and authentic Agoyin sauce with dynamic cart management, WhatsApp instant ordering, and wholesale bulk portals.',
+      tech: ['PHP', 'Laravel', 'Alpine.js', 'TailwindCSS', 'MySQL', 'REST API'],
       githubUrl: 'https://github.com/captainshelby01',
-      liveUrl: 'https://example.com',
-      visualType: 'kanban'
+      liveUrl: 'https://www.nourisharkfoods.com',
+      visualType: 'nourishark',
+      status: 'Live in Production',
+      features: [
+        'Dynamic slide-over cart drawer and sticky mobile quick-order bar with real-time price calculations',
+        'Direct WhatsApp instant order routing and custom wholesale/bulk procurement portal',
+        'Interactive product catalog with stone-free purity badges, weight variants, and recipe integration',
+        'SEO-optimized product schemas, Alpine-powered modal quick-views, and lightning-fast server-rendered views'
+      ],
+      architecture: 'Robust Laravel backend architecture with MySQL relational schemas, session-managed cart states, responsive Alpine.js reactive components, and optimized asset delivery.'
     }
   ] as Project[],
+
+  testimonials: [
+    {
+      id: 1,
+      name: 'Winfrey Agbelese',
+      role: 'Author & Executive Communication Architect',
+      company: 'The V3 Fixer',
+      feedback: 'Saliu took our digital branding and book platform to the next level. The V3 Fixer platform has lightning-fast load times, impeccable design fidelity, and streamlined our book pre-order system effortlessly.',
+      rating: 5,
+      projectRelation: 'The V3 Fixer'
+    },
+    {
+      id: 2,
+      name: 'Dr. Jerry O.',
+      role: 'Lead Educator & Founder',
+      company: 'Dr. J Tutors',
+      feedback: 'The tutoring website Saliu built helped us double our student inquiries within weeks. The automated booking flow and responsive exam modules made parents feel immediately confident in our service.',
+      rating: 5,
+      projectRelation: 'Dr. J Tutors'
+    },
+    {
+      id: 3,
+      name: 'Samuel Adeniyi',
+      role: 'Creative Director',
+      company: 'Allura Smiles Creative',
+      feedback: 'Working with Saliu was seamless. He translated our agency vision into a cinematic, ultra-smooth web experience that our high-profile clients constantly compliment. Truly reliable engineering.',
+      rating: 5,
+      projectRelation: 'Allura Smiles Creative'
+    }
+  ] as Testimonial[],
 
   skills: [
     {

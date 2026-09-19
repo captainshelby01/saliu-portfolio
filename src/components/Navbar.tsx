@@ -13,6 +13,7 @@ const NAV_LINKS: NavLink[] = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -20,6 +21,16 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +114,9 @@ export default function Navbar() {
           <button
             className="mobile-menu-btn"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation-drawer"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -111,7 +124,7 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Drawer Menu */}
-      <div className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div id="mobile-navigation-drawer" className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-drawer-content">
           {NAV_LINKS.map((link) => (
             <a
