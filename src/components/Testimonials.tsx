@@ -16,9 +16,9 @@ export default function Testimonials() {
 
       <div className="container">
         <span className="section-subtitle">Client Feedback</span>
-        <h2 className="section-title text-gradient">Recommendations & Trust</h2>
+        <h2 className="section-title text-gradient">Recommendations &amp; Trust</h2>
         <p className="section-desc">
-          What founders, educators, and creative directors say about collaborating on mission-critical applications.
+          Feedback from founders, educators, and directors on completed client projects.
         </p>
 
         <div className="testimonials-grid grid-3">

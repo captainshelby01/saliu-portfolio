@@ -69,7 +69,7 @@ export default function Hero() {
           </div>
 
           <p className="hero-description">
-            I engineer business web platforms and mobile apps with <strong>Laravel</strong>, <strong>React</strong>, and <strong>Expo React Native</strong>—from high-converting customer inquiry funnels to automated order workflows. Available for freelance &amp; contract roles.
+            I engineer business web platforms and applications with <strong>Laravel</strong>, <strong>PHP</strong>, and <strong>React</strong>—from customer inquiry funnels to automated order workflows. Available for freelance, contract, and full-time engineering.
           </p>
 
           <div className="hero-actions">

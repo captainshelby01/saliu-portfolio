@@ -35,8 +35,8 @@ export default function About() {
                 <span className="stat-label">Projects Built</span>
               </div>
               <div className="stat-card glass-card">
-                <span className="stat-number accent-gradient">100%</span>
-                <span className="stat-label">Production Delivery</span>
+                <span className="stat-number accent-gradient">4+</span>
+                <span className="stat-label">Live Client Systems</span>
               </div>
             </div>
           </div>

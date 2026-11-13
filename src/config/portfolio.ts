@@ -52,16 +52,16 @@ export const PORTFOLIO_DATA = {
     name: 'Saliu Oluwafemi',
     fullName: 'Saliu Oluwafemi Emmanuel',
     titles: [
-      'Laravel & PHP Engineer',
-      'React Native Mobile Developer',
-      'Full Stack Web Specialist',
+      'Full Stack Software Engineer',
+      'Laravel & PHP Specialist',
+      'React & Frontend Developer',
       'Founder at Crestlabs'
     ],
     email: 'olukoyioluwafemi100@gmail.com',
     github: 'https://github.com/captainshelby01',
     linkedin: 'https://www.linkedin.com/in/oluwafemi-saliu-18526a89/',
     location: 'Nigeria (Available for Remote)',
-    availability: 'Available for Work',
+    availability: 'Available for Freelance & Full-time Roles',
     experienceYears: '3+ yrs'
   },
   
@@ -98,6 +98,7 @@ export const PORTFOLIO_DATA = {
       features: [
         'Interactive subject catalog & curriculum breakdown for K-12 and international exams',
         'Automated WhatsApp inquiry router that converts booking form inputs directly into structured messages',
+        'Client-reported outcome: Direct WhatsApp routing and exam catalog restructuring helped double student onboarding inquiries within the first 6 weeks of launch',
         'Cross-device responsive design with accessible color contrast and educational theme',
         'Parent review testimonial slider and tutor qualification badges'
       ],
@@ -175,10 +176,10 @@ export const PORTFOLIO_DATA = {
     {
       title: 'Core Production Stack',
       categoryKey: 'backend',
-      description: 'Technologies I actively ship with in production client systems.',
+      description: 'Primary tools I actively ship with in production client applications.',
       skills: [
         { name: 'Laravel & PHP', badge: 'Primary Backend', projectRef: 'Nourish Ark Foods' },
-        { name: 'React & TypeScript', badge: 'Primary Web', projectRef: 'The V3 Fixer' },
+        { name: 'React', badge: 'Primary Frontend', projectRef: 'The V3 Fixer' },
         { name: 'Tailwind CSS', badge: 'UI Architecture', projectRef: 'All Projects' },
         { name: 'Alpine.js', badge: 'Reactive UI', projectRef: 'Nourish Ark Foods' },
         { name: 'MySQL & Eloquent', badge: 'Relational DB', projectRef: 'Nourish Ark Foods' },
@@ -186,15 +187,15 @@ export const PORTFOLIO_DATA = {
       ]
     },
     {
-      title: 'Mobile & Frontend',
+      title: 'Frameworks & Web',
       categoryKey: 'frontend',
-      description: 'Cross-platform mobile apps and responsive web interfaces.',
+      description: 'Modern component architectures and responsive interfaces.',
       skills: [
-        { name: 'React Native & Expo', badge: 'Mobile Apps' },
-        { name: 'Next.js & Vite', badge: 'Web Frameworks' },
+        { name: 'Next.js', badge: 'React Framework' },
         { name: 'TypeScript', badge: 'Strict Typing' },
+        { name: 'Vite', badge: 'Build Tooling' },
         { name: 'HTML5 & Schema.org', badge: 'SEO & Structured Data' },
-        { name: 'Component Modularity', badge: 'UI Systems' }
+        { name: 'React Native & Expo', badge: 'Mobile Development' }
       ]
     },
     {
@@ -202,11 +203,11 @@ export const PORTFOLIO_DATA = {
       categoryKey: 'database',
       description: 'Relational modeling, caching, and secure transaction workflows.',
       skills: [
-        { name: 'MySQL', badge: 'Production RDBMS' },
-        { name: 'PostgreSQL', badge: 'Complex Queries' },
+        { name: 'PostgreSQL', badge: 'Relational DB' },
         { name: 'Redis', badge: 'Caching & Queues' },
         { name: 'MongoDB', badge: 'Document Store' },
-        { name: 'Auth & JWT Security', badge: 'Access Control' }
+        { name: 'Database Schema Design', badge: 'Data Modeling' },
+        { name: 'JWT & Session Auth', badge: 'Access Control' }
       ]
     },
     {
@@ -214,9 +215,9 @@ export const PORTFOLIO_DATA = {
       categoryKey: 'devops',
       description: 'Version control, automated pipelines, and cloud hosting.',
       skills: [
-        { name: 'Git & GitHub', badge: 'Agile Workflows' },
+        { name: 'Git & GitHub', badge: 'Version Control' },
         { name: 'Docker', badge: 'Containers' },
-        { name: 'CI/CD Pipelines', badge: 'Automated Testing' },
+        { name: 'CI/CD Pipelines', badge: 'Deployment Automation' },
         { name: 'Linux & Nginx', badge: 'VPS & Server Config' }
       ]
     }
