@@ -14,12 +14,15 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  level: number;
+  level?: number;
+  badge?: string;
+  projectRef?: string;
 }
 
 export interface SkillCategory {
   title: string;
   categoryKey: 'frontend' | 'backend' | 'database' | 'devops';
+  description?: string;
   skills: Skill[];
 }
 
@@ -49,10 +52,10 @@ export const PORTFOLIO_DATA = {
     name: 'Saliu Oluwafemi',
     fullName: 'Saliu Oluwafemi Emmanuel',
     titles: [
-      'Full Stack Developer',
-      'UI/UX Enthusiast',
-      'Problem Solver',
-      'DevOps Practitioner'
+      'Laravel & PHP Engineer',
+      'React Native Mobile Developer',
+      'Full Stack Web Specialist',
+      'Founder at Crestlabs'
     ],
     email: 'olukoyioluwafemi100@gmail.com',
     github: 'https://github.com/captainshelby01',
@@ -67,19 +70,20 @@ export const PORTFOLIO_DATA = {
       id: 1,
       title: 'The V3 Fixer',
       category: 'fullstack',
-      description: 'An elegant professional platform for Winfrey Agbelese, The V3 Fixer. Offers executive communication architect branding, digital bookstores, pre-order systems for the V3 Devotional Trilogy, and full SEO/Schema optimizations.',
-      tech: ['React', 'TypeScript', 'TailwindCSS', 'Vite', 'JSON-LD Schema'],
+      description: 'An executive branding and literary eCommerce platform for author Winfrey Agbelese. Features an automated book pre-order system for the V3 Trilogy, transactional email receipts, digital bookstores, and author SEO schemas.',
+      tech: ['React', 'TypeScript', 'Serverless APIs', 'TailwindCSS', 'JSON-LD Schema'],
       githubUrl: 'https://github.com/captainshelby01',
       liveUrl: 'https://www.thev3fixer.com',
       visualType: 'v3fixer',
       status: 'Live in Production',
       features: [
-        'Custom pre-order gateway for the V3 Devotional Trilogy with dynamic order receipt generation',
-        'Executive branding showcase with responsive media galleries and testimonials',
-        'Rich JSON-LD Schema markup for maximum search engine indexability and author branding',
-        'Sub-second page load times with optimized asset bundling via Vite'
+        'Full-stack pre-order gateway for the V3 Devotional Trilogy with dynamic order receipt generation',
+        'Serverless API integration for automated customer order processing and receipt dispatch',
+        'Executive branding showcase with responsive media galleries and author credentials',
+        'Rich JSON-LD Schema markup for maximum search engine indexability and Google author knowledge graphs',
+        'Sub-second page load times with optimized asset bundling via Vite edge deployment'
       ],
-      architecture: 'Single Page React application leveraging TypeScript for strict typing, component modularity, and client-side routing optimized for Vercel edge deployment.'
+      architecture: 'Full-stack architecture pairing a reactive TypeScript frontend with serverless backend API functions to securely capture pre-orders, process customer confirmations, and trigger automated receipt emails.'
     },
     {
       id: 2,
@@ -169,46 +173,51 @@ export const PORTFOLIO_DATA = {
 
   skills: [
     {
-      title: 'Frontend Development',
-      categoryKey: 'frontend',
-      skills: [
-        { name: 'React', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'Redux Toolkit', level: 80 },
-        { name: 'HTML5 / CSS3', level: 95 },
-        { name: 'Next.js', level: 75 }
-      ]
-    },
-    {
-      title: 'Backend Engineering',
+      title: 'Core Production Stack',
       categoryKey: 'backend',
+      description: 'Technologies I actively ship with in production client systems.',
       skills: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Express', level: 90 },
-        { name: 'Laravel / PHP', level: 92 },
-        { name: 'REST APIs', level: 95 },
-        { name: 'GraphQL', level: 75 }
+        { name: 'Laravel & PHP', badge: 'Primary Backend', projectRef: 'Nourish Ark Foods' },
+        { name: 'React & TypeScript', badge: 'Primary Web', projectRef: 'The V3 Fixer' },
+        { name: 'Tailwind CSS', badge: 'UI Architecture', projectRef: 'All Projects' },
+        { name: 'Alpine.js', badge: 'Reactive UI', projectRef: 'Nourish Ark Foods' },
+        { name: 'MySQL & Eloquent', badge: 'Relational DB', projectRef: 'Nourish Ark Foods' },
+        { name: 'RESTful API Design', badge: 'Architecture', projectRef: 'Client Endpoints' }
       ]
     },
     {
-      title: 'Databases & Cache',
+      title: 'Mobile & Frontend',
+      categoryKey: 'frontend',
+      description: 'Cross-platform mobile apps and responsive web interfaces.',
+      skills: [
+        { name: 'React Native & Expo', badge: 'Mobile Apps' },
+        { name: 'Next.js & Vite', badge: 'Web Frameworks' },
+        { name: 'TypeScript', badge: 'Strict Typing' },
+        { name: 'HTML5 & Schema.org', badge: 'SEO & Structured Data' },
+        { name: 'Component Modularity', badge: 'UI Systems' }
+      ]
+    },
+    {
+      title: 'Databases & Architecture',
       categoryKey: 'database',
+      description: 'Relational modeling, caching, and secure transaction workflows.',
       skills: [
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MongoDB', level: 88 },
-        { name: 'MySQL', level: 80 },
-        { name: 'Redis', level: 70 }
+        { name: 'MySQL', badge: 'Production RDBMS' },
+        { name: 'PostgreSQL', badge: 'Complex Queries' },
+        { name: 'Redis', badge: 'Caching & Queues' },
+        { name: 'MongoDB', badge: 'Document Store' },
+        { name: 'Auth & JWT Security', badge: 'Access Control' }
       ]
     },
     {
-      title: 'DevOps & Tools',
+      title: 'DevOps & Tooling',
       categoryKey: 'devops',
+      description: 'Version control, automated pipelines, and cloud hosting.',
       skills: [
-        { name: 'Git & GitHub', level: 92 },
-        { name: 'Docker', level: 78 },
-        { name: 'AWS (S3/EC2)', level: 70 },
-        { name: 'CI/CD Pipelines', level: 75 },
-        { name: 'Linux', level: 80 }
+        { name: 'Git & GitHub', badge: 'Agile Workflows' },
+        { name: 'Docker', badge: 'Containers' },
+        { name: 'CI/CD Pipelines', badge: 'Automated Testing' },
+        { name: 'Linux & Nginx', badge: 'VPS & Server Config' }
       ]
     }
   ] as SkillCategory[],

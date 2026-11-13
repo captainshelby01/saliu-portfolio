@@ -1,4 +1,4 @@
-import { Layout, Server, Database, Settings } from 'lucide-react';
+import { Layout, Server, Database, Settings, ArrowUpRight } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../config/portfolio';
 import './Skills.css';
 
@@ -6,47 +6,53 @@ export default function Skills() {
   const getCategoryIcon = (key: string) => {
     switch (key) {
       case 'frontend':
-        return <Layout className="cat-icon text-indigo" size={24} />;
+        return <Layout className="cat-icon text-indigo" size={22} />;
       case 'backend':
-        return <Server className="cat-icon text-cyan" size={24} />;
+        return <Server className="cat-icon text-cyan" size={22} />;
       case 'database':
-        return <Database className="cat-icon text-pink" size={24} />;
+        return <Database className="cat-icon text-pink" size={22} />;
       case 'devops':
-        return <Settings className="cat-icon text-emerald" size={24} />;
+        return <Settings className="cat-icon text-emerald" size={22} />;
       default:
-        return <Settings className="cat-icon" size={24} />;
+        return <Settings className="cat-icon" size={22} />;
     }
   };
 
   return (
     <section id="skills" className="skills-section">
       <div className="container">
-        <span className="section-subtitle">What I Do</span>
-        <h2 className="section-title text-gradient">Technical Skills</h2>
+        <span className="section-subtitle">Technical Stack</span>
+        <h2 className="section-title text-gradient">Technologies &amp; Tools</h2>
         <p className="section-desc">
-          A representation of technologies I use to build scalable, high-performance, and secure applications.
+          The battle-tested technologies and architectural tools I use to deliver fast, secure web platforms and mobile apps.
         </p>
 
         <div className="skills-grid grid-2">
           {PORTFOLIO_DATA.skills.map((category, idx) => (
             <div key={idx} className="category-card glass-card">
               <div className="category-header">
-                {getCategoryIcon(category.categoryKey)}
-                <h3>{category.title}</h3>
+                <div className="category-header-title">
+                  {getCategoryIcon(category.categoryKey)}
+                  <h3>{category.title}</h3>
+                </div>
+                {category.description && (
+                  <p className="category-subtext">{category.description}</p>
+                )}
               </div>
-              <div className="skills-list">
+              <div className="skills-chips-wrapper">
                 {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
+                  <div key={sIdx} className="skill-chip">
+                    <div className="skill-chip-main">
+                      <span className="skill-chip-name">{skill.name}</span>
+                      {skill.badge && (
+                        <span className="skill-chip-badge">{skill.badge}</span>
+                      )}
                     </div>
-                    <div className="skill-progress-bg">
-                      <div
-                        className="skill-progress-fill"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                    {skill.projectRef && (
+                      <span className="skill-chip-project">
+                        <ArrowUpRight size={11} /> {skill.projectRef}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>

@@ -47,8 +47,8 @@ export default function Testimonials() {
                 <div className="client-info">
                   <div className="client-name-row">
                     <h4 className="client-name">{item.name}</h4>
-                    <span className="verified-pill" title="Verified Client">
-                      <CheckCircle size={12} /> Verified
+                    <span className="verified-pill" title={`Verified client review for ${item.company}`}>
+                      <CheckCircle size={12} /> Client Review
                     </span>
                   </div>
                   <p className="client-role">{item.role}</p>

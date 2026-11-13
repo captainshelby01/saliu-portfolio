@@ -19,17 +19,17 @@ export default function App() {
         {/* Intro Hero Section */}
         <Hero />
 
+        {/* Dynamic Project Filter Grid Section & Deep Dive Modal - Proof First */}
+        <Projects />
+
         {/* Narrative & Stats About Section */}
         <About />
 
-        {/* Technical Skill Metrics Section */}
-        <Skills />
-
-        {/* Dynamic Project Filter Grid Section & Deep Dive Modal */}
-        <Projects />
-
         {/* Professional Career Timeline Section */}
         <Experience />
+
+        {/* Technical Stack & Capabilities Section */}
+        <Skills />
 
         {/* Client Recommendations & Social Proof Section */}
         <Testimonials />

@@ -69,31 +69,29 @@ export default function Hero() {
           </div>
 
           <p className="hero-description">
-            Passionate Full Stack Developer specializing in crafting high-performance, 
-            visually stunning, and secure web solutions. I turn complex logic into 
-            intuitive user experiences.
+            I engineer business web platforms and mobile apps with <strong>Laravel</strong>, <strong>React</strong>, and <strong>Expo React Native</strong>—from high-converting customer inquiry funnels to automated order workflows. Available for freelance &amp; contract roles.
           </p>
 
           <div className="hero-actions">
             <button onClick={() => scrollToSection('#projects')} className="btn btn-primary">
-              Explore Projects <ArrowRight size={18} />
+              View Selected Projects <ArrowRight size={18} />
             </button>
             <button onClick={() => scrollToSection('#contact')} className="btn btn-secondary">
-              Let's Connect
+              Start a Project
             </button>
           </div>
 
           <div className="hero-socials">
-            <span className="socials-label">Find me on:</span>
+            <span className="socials-label">Quick links:</span>
             <div className="socials-list">
-              <a href={personal.github} target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="GitHub">
-                <GithubIcon size={20} />
+              <a href={personal.github} target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="GitHub Repositories" title="GitHub">
+                <GithubIcon size={18} />
               </a>
-              <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn">
-                <LinkedinIcon size={20} />
+              <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                <LinkedinIcon size={18} />
               </a>
-              <a href={`mailto:${personal.email}`} className="social-icon-btn" aria-label="Email">
-                <Mail size={20} />
+              <a href={`mailto:${personal.email}`} className="social-icon-btn" aria-label="Direct Email" title="Email">
+                <Mail size={18} />
               </a>
             </div>
           </div>

@@ -15,17 +15,14 @@ export default function About() {
           {/* Narrative Content */}
           <div className="about-text-content">
             <h3 className="about-heading">
-              Building scalable digital solutions with clean architecture
+              Engineering reliable, high-converting digital products from conception to deployment
             </h3>
             <p className="about-paragraph">
-              Hello! I'm <strong>{personal.fullName}</strong>, a highly motivated Full Stack Developer. 
-              My journey in software engineering stems from a deep curiosity about how things work under the hood. 
-              I design and build applications that combine solid backend architecture with fluid, interactive user experiences.
+              I'm <strong>{personal.fullName}</strong>, a Full Stack &amp; Mobile Developer and founder at <strong>Crestlabs</strong>. 
+              I partner with founders, businesses, and distributed engineering teams to turn ideas into robust, production-grade applications that convert users and scale smoothly.
             </p>
             <p className="about-paragraph">
-              I focus on writing semantic, clean, and maintainable code. I enjoy brainstorming complex logic, 
-              optimizing database queries, and setting up automated CI/CD pipelines to make deployments seamless. 
-              I'm always eager to learn new technologies and apply best practices in my daily workflows.
+              Whether building an e-commerce platform with Laravel and Alpine.js or shipping cross-platform mobile apps with Expo and React Native, my focus is always on clear architectural decisions, performance optimization, and solving tangible business problems.
             </p>
 
             <div className="stats-grid">
@@ -38,8 +35,8 @@ export default function About() {
                 <span className="stat-label">Projects Built</span>
               </div>
               <div className="stat-card glass-card">
-                <span className="stat-number accent-gradient">95%</span>
-                <span className="stat-label">Test Coverage</span>
+                <span className="stat-number accent-gradient">100%</span>
+                <span className="stat-label">Production Delivery</span>
               </div>
             </div>
           </div>
@@ -51,8 +48,8 @@ export default function About() {
                 <Cpu size={24} />
               </div>
               <div className="attribute-info">
-                <h4>Full Stack Engineering</h4>
-                <p>Developing seamless end-to-end applications using React, Node.js, and reliable databases.</p>
+                <h4>Full Stack &amp; Mobile</h4>
+                <p>Developing end-to-end applications using Laravel, PHP, React, and Expo React Native.</p>
               </div>
             </div>
 
@@ -61,8 +58,8 @@ export default function About() {
                 <GraduationCap size={24} />
               </div>
               <div className="attribute-info">
-                <h4>Continuous Learning</h4>
-                <p>Bachelor of Science in Computer Science, keeping up-to-date with cloud certifications and dev trends.</p>
+                <h4>Computer Science Foundation</h4>
+                <p>B.Sc. in Computer Science with a strong background in data structures, algorithms, and system design.</p>
               </div>
             </div>
 
@@ -71,8 +68,8 @@ export default function About() {
                 <Award size={24} />
               </div>
               <div className="attribute-info">
-                <h4>Quality Assurance</h4>
-                <p>Implementing extensive unit, integration, and performance testing for robust codebases.</p>
+                <h4>Business Impact First</h4>
+                <p>Architecting user funnels, payment/ordering workflows, and SEO schemas that drive measurable growth.</p>
               </div>
             </div>
           </div>

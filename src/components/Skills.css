@@ -4,26 +4,39 @@
 
 .skills-grid {
   margin-top: 20px;
-  gap: 30px;
+  gap: 28px;
 }
 
 .category-card {
-  padding: 32px;
+  padding: 28px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .category-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 14px;
+}
+
+.category-header-title {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid var(--glass-border);
-  padding-bottom: 16px;
 }
 
-.category-header h3 {
-  font-size: 20px;
+.category-header-title h3 {
+  font-size: 19px;
   font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.category-subtext {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  line-height: 1.4;
 }
 
 .cat-icon {
@@ -35,56 +48,82 @@
 .text-pink { color: var(--color-accent); }
 .text-emerald { color: var(--color-success); }
 
-.skills-list {
+/* Chips & Tags Layout */
+.skills-chips-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
-.skill-item {
+.skill-chip {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.skill-info {
-  display: flex;
+  align-items: center;
   justify-content: space-between;
-  font-size: 14px;
-  font-weight: 500;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
 }
 
-.skill-name {
+.skill-chip:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.35);
+  transform: translateX(2px);
+}
+
+.skill-chip-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.skill-chip-name {
+  font-size: 14px;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
-.skill-percentage {
+.skill-chip-badge {
+  font-family: var(--font-heading);
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(6, 182, 212, 0.12);
+  color: var(--color-secondary);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.skill-chip-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-chip:hover .skill-chip-project {
   color: var(--text-secondary);
-}
-
-.skill-progress-bg {
-  width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-full);
-  overflow: hidden;
-}
-
-.skill-progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  border-radius: var(--radius-full);
-  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Hover glows on categories */
-.category-card:hover .skill-progress-fill {
-  filter: brightness(1.2);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 576px) {
   .category-card {
-    padding: 24px;
+    padding: 20px;
+  }
+  
+  .skill-chip {
+    padding: 8px 12px;
   }
 }

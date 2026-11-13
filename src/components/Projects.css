@@ -479,6 +479,16 @@
 }
 
 @media (max-width: 768px) {
+  .project-thumbnail {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 180px;
+    background-color: #030712;
+  }
+  .project-visual-mock {
+    background-size: cover;
+    background-position: top center;
+  }
   .project-actions-mobile {
     display: flex;
   }

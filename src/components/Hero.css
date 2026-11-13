@@ -104,11 +104,13 @@
 
 .typing-container {
   font-family: var(--font-heading);
-  font-size: clamp(18px, 4vw, 28px);
+  font-size: clamp(18px, 3.5vw, 26px);
   font-weight: 600;
   margin-bottom: 24px;
   color: var(--text-primary);
-  height: 42px;
+  min-height: 48px;
+  height: auto;
+  line-height: 1.35;
 }
 
 .typing-text {
@@ -336,8 +338,8 @@
 
 @media (max-width: 992px) {
   .hero-section {
-    padding-top: 120px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 30px;
   }
   .hero-content {
     text-align: center;
@@ -347,15 +349,22 @@
   }
   .hero-description {
     text-align: center;
+    font-size: 16px;
+    margin-bottom: 24px;
+    max-width: 480px;
   }
   .hero-actions {
     justify-content: center;
+    margin-bottom: 28px;
   }
   .hero-socials {
     justify-content: center;
   }
   .hero-visual {
-    margin-top: 40px;
+    margin-top: 24px;
+  }
+  .portrait-wrapper {
+    max-width: 280px;
   }
   .float-metric {
     left: 10px;
@@ -366,13 +375,39 @@
 }
 
 @media (max-width: 576px) {
+  .hero-section {
+    padding-top: 85px;
+    padding-bottom: 20px;
+  }
+  .hero-title {
+    font-size: clamp(28px, 8vw, 42px);
+    margin-bottom: 10px;
+  }
+  .typing-container {
+    font-size: 18px;
+    min-height: 36px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
   .hero-actions {
     flex-direction: column;
     width: 100%;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 20px;
   }
   .hero-actions button {
     width: 100%;
+  }
+  .hero-visual {
+    margin-top: 16px;
+  }
+  .portrait-wrapper {
+    max-width: 220px;
   }
   .floating-card {
     display: none;
