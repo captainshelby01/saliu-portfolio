@@ -126,7 +126,7 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       <div id="mobile-navigation-drawer" className={`mobile-drawer ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-drawer-content">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.filter((link) => link.href !== '#contact').map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -147,7 +147,7 @@ export default function Navbar() {
               handleLinkClick('#contact');
             }}
           >
-            Contact Me
+            Get In Touch
           </a>
         </div>
       </div>
