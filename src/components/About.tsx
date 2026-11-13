@@ -18,11 +18,11 @@ export default function About() {
               Engineering reliable, high-converting digital products from conception to deployment
             </h3>
             <p className="about-paragraph">
-              I'm <strong>{personal.fullName}</strong>, a Full Stack &amp; Mobile Developer and founder at <strong>Crestlabs</strong>. 
+              I'm <strong>{personal.fullName}</strong>, a Full Stack Software Engineer and founder at <strong>Crestlabs</strong>. 
               I partner with founders, businesses, and distributed engineering teams to turn ideas into robust, production-grade applications that convert users and scale smoothly.
             </p>
             <p className="about-paragraph">
-              Whether building an e-commerce platform with Laravel and Alpine.js or shipping cross-platform mobile apps with Expo and React Native, my focus is always on clear architectural decisions, performance optimization, and solving tangible business problems.
+              Whether building an e-commerce platform with Laravel and Alpine.js or developing modern web applications with React and TypeScript, my focus is always on clear architectural decisions, performance optimization, and solving tangible business problems.
             </p>
 
             <div className="stats-grid">
@@ -48,8 +48,8 @@ export default function About() {
                 <Cpu size={24} />
               </div>
               <div className="attribute-info">
-                <h4>Full Stack &amp; Mobile</h4>
-                <p>Developing end-to-end applications using Laravel, PHP, React, and Expo React Native.</p>
+                <h4>Full Stack Engineering</h4>
+                <p>Developing end-to-end web applications and robust APIs using Laravel, PHP, and React.</p>
               </div>
             </div>
 
